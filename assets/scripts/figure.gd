@@ -9,17 +9,25 @@ var is_rapid = false
 
 const START_POSITION = Vector2i(560, 0)
 
-@onready var cube = $Cube
-@onready var line = $Line
-@onready var hook = $Hook
+@onready var smashboy = $Smashboy
+@onready var hero = $Hero
+@onready var orange_ricky = $OrangeRicky
+@onready var blue_ricky = $BlueRicky
+@onready var teewee = $Teewee
+@onready var cleveland_z = $ClevelandZ
+@onready var rhode_island_z = $RhodeIslandZ
 
 var figures = []
 var actual_figure = null
 
 func _ready() -> void:
-	figures.append(cube)
-	figures.append(line)
-	figures.append(hook)
+	figures.append(orange_ricky)
+	figures.append(blue_ricky)
+	figures.append(hero)
+	figures.append(smashboy)
+	figures.append(teewee)
+	figures.append(cleveland_z)
+	figures.append(rhode_island_z)
 
 	create_new_figure()
 
@@ -59,6 +67,7 @@ func _physics_process(delta: float) -> void:
 
 func create_new_figure() -> void:
 	position = START_POSITION
+	rotation_degrees = randi() % 4 * 90
 	if actual_figure:
 		actual_figure.disabled = true
 		actual_figure.visible = false

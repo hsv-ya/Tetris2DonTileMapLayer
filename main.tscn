@@ -73,32 +73,72 @@ platform_floor_layers = 4294967041
 platform_wall_layers = 2
 script = ExtResource("2_hlymr")
 
-[node name="Cube" type="CollisionPolygon2D" parent="Figure"]
+[node name="Smashboy" type="CollisionPolygon2D" parent="Figure"]
 visible = false
 polygon = PackedVector2Array(0, 0, 0, 80, 80, 80, 80, 0)
 disabled = true
 
-[node name="TileLine" type="TileMapLayer" parent="Figure/Cube"]
+[node name="TileLine" type="TileMapLayer" parent="Figure/Smashboy"]
 position = Vector2(-600, 0)
 tile_map_data = PackedByteArray("AAAPAAAAAAADAAAAAAAQAAAAAAADAAAAAAAQAAEAAAADAAAAAAAPAAEAAAADAAAAAAA=")
 tile_set = SubResource("TileSet_00et6")
 
-[node name="Line" type="CollisionPolygon2D" parent="Figure"]
+[node name="Hero" type="CollisionPolygon2D" parent="Figure"]
 visible = false
 polygon = PackedVector2Array(0, 0, 0, 40, 160, 40, 160, 0)
 disabled = true
 
-[node name="TileLine" type="TileMapLayer" parent="Figure/Line"]
+[node name="TileLine" type="TileMapLayer" parent="Figure/Hero"]
 position = Vector2(-600, 0)
 tile_map_data = PackedByteArray("AAAPAAAAAAABAAAAAAAQAAAAAAABAAAAAAARAAAAAAABAAAAAAASAAAAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_00et6")
 
-[node name="Hook" type="CollisionPolygon2D" parent="Figure"]
+[node name="BlueRicky" type="CollisionPolygon2D" parent="Figure"]
 visible = false
 polygon = PackedVector2Array(0, 0, 120, 0, 120, 80, 80, 80, 80, 40, 0, 40)
 disabled = true
 
-[node name="TileLine" type="TileMapLayer" parent="Figure/Hook"]
+[node name="TileLine" type="TileMapLayer" parent="Figure/BlueRicky"]
 position = Vector2(-600, 0)
 tile_map_data = PackedByteArray("AAAPAAAAAAACAAAAAAAQAAAAAAACAAAAAAARAAAAAAACAAAAAAARAAEAAAACAAAAAAA=")
+tile_set = SubResource("TileSet_00et6")
+
+[node name="OrangeRicky" type="CollisionPolygon2D" parent="Figure"]
+visible = false
+polygon = PackedVector2Array(0, 0, 120, 0, 120, 40, 40, 40, 40, 80, 0, 80)
+disabled = true
+
+[node name="TileLine" type="TileMapLayer" parent="Figure/OrangeRicky"]
+position = Vector2(-600, 0)
+tile_map_data = PackedByteArray("AAAPAAAAAAABAAAAAAAQAAAAAAABAAAAAAARAAAAAAABAAAAAAAPAAEAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_00et6")
+
+[node name="Teewee" type="CollisionPolygon2D" parent="Figure"]
+visible = false
+polygon = PackedVector2Array(0, 0, 120, 0, 120, 40, 80, 40, 80, 80, 40, 80, 40, 40, 0, 40)
+disabled = true
+
+[node name="TileLine" type="TileMapLayer" parent="Figure/Teewee"]
+position = Vector2(-600, 0)
+tile_map_data = PackedByteArray("AAAPAAAAAAADAAAAAAAQAAAAAAADAAAAAAARAAAAAAADAAAAAAAQAAEAAAADAAAAAAA=")
+tile_set = SubResource("TileSet_00et6")
+
+[node name="ClevelandZ" type="CollisionPolygon2D" parent="Figure"]
+visible = false
+polygon = PackedVector2Array(0, 0, 80, 0, 80, 40, 120, 40, 120, 80, 40, 80, 40, 40, 0, 40)
+disabled = true
+
+[node name="TileLine" type="TileMapLayer" parent="Figure/ClevelandZ"]
+position = Vector2(-600, 0)
+tile_map_data = PackedByteArray("AAAPAAAAAAACAAAAAAAQAAAAAAACAAAAAAAQAAEAAAACAAAAAAARAAEAAAACAAAAAAA=")
+tile_set = SubResource("TileSet_00et6")
+
+[node name="RhodeIslandZ" type="CollisionPolygon2D" parent="Figure"]
+visible = false
+polygon = PackedVector2Array(40, 0, 120, 0, 120, 40, 80, 40, 80, 80, 0, 80, 0, 40, 40, 40)
+disabled = true
+
+[node name="TileLine" type="TileMapLayer" parent="Figure/RhodeIslandZ"]
+position = Vector2(-600, 0)
+tile_map_data = PackedByteArray("AAAQAAAAAAABAAAAAAARAAAAAAABAAAAAAAQAAEAAAABAAAAAAAPAAEAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_00et6")
