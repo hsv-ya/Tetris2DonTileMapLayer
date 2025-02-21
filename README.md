@@ -6,8 +6,8 @@ Features
  - add a quick figure landing
  - add all standart figures
  - add figure rotation
+ - add an increase in falling speed
 
 TODO
  - add scoring
  - add full line deletion
- - add an increase in falling speed
