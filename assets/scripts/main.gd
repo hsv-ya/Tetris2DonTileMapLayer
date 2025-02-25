@@ -16,6 +16,10 @@ func _ready() -> void:
 
 	connect("start_new_game", Callable($Figure, "_start_new_game"))
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("quit"):
+		get_tree().quit()
+
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("paused"):
 		get_tree().paused = !get_tree().paused

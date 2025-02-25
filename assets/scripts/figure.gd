@@ -78,7 +78,6 @@ func _physics_process(delta: float) -> void:
 
 	if is_on_floor() and !complete:
 		complete = true
-		print("Need create new figure")
 		create_new_figure()
 		move_and_slide()
 		return
